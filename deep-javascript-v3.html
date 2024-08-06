@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Deep JavaScript Foundations, v3 | Frontend Masters</title>
+    <style>
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			font-size: 16px;
+			margin: 0;
+			padding: 30px;
+			background-color: #111;
+			color: #fff; 
+		}
+		
+		h2 {
+				background-color: #333;
+				color: #ccc;
+				padding: 10px;
+		}
+		h3 {
+			border-bottom: 1px solid #333;
+			padding-bottom: 6px;
+		}
+		
+		td {
+		 padding: 3px 0;
+					}
+					td a {
+							color: #ccc;
+							text-decoration: none;
+							padding-right: 20px;
+					}
+					td p {
+							display: inline;
+							margin: 0;
+							padding: 0px;
+					}
+					td p a {
+							color: #5baec0;
+							text-decoration: underline;
+					}
+					h1 a {
+							color: #5baec0;
+							text-decoration: none;
+					}
+					h3 a {
+							color: #5baec0;
+							text-decoration: none;
+					}
+					p a {
+							padding: 0px;
+					}
+					code {
+							background-color: #1e3134;
+							padding: 3px;
+			}
+    </style>
+  </head>
+  <body>
+    <h1><a href="https://frontendmasters.com/courses/deep-javascript-v3/" target="_blank">Deep JavaScript Foundations, v3</a></h1>
+    <h2>Introduction</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/introduction" target="_blank">Introduction</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/introduction?t=5" target="_blank">00:00:05</a></td><td><p>Before you watch this course, make sure to watch <a href="https://frontendmasters.com/teachers/kyle-simpson/code-is-for-humans/">Code is for Humans</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/introduction?t=28" target="_blank">00:00:28</a></td><td><p>Here&rsquo;s a link to <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/introduction?t=81" target="_blank">00:01:21</a></td><td><p>Here&rsquo;s Kyle on <a href="https://twitter.com/getify">Twitter</a>, <a href="https://github.com/getify">GitHub</a>, and <a href="mailto:getify@gmail.com">email</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/introduction?t=87" target="_blank">00:01:27</a></td><td><p>Here&rsquo;s a link to <a href="https://github.com/getify/You-Dont-Know-JS">the YDKJS series</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/introduction?t=132" target="_blank">00:02:12</a></td><td><p>Here&rsquo;s a link for more on <a href="https://babeljs.io/">Babel</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/introduction?t=442" target="_blank">00:07:22</a></td><td><p>Here&rsquo;s a link to the <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#Title">JavaScript spec</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/understanding-your-code" target="_blank">Understanding Your Code</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/understanding-your-code?t=204" target="_blank">00:03:24</a></td><td><p>Here&rsquo;s a link to the <a href="https://twitter.com/YDKJS/status/1099716798088400899">tweet</a> at the bottom of the slide</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/course-overview" target="_blank">Course Overview</a></h3>
+    <h2>Types</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types" target="_blank">Primitive Types</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types?t=7" target="_blank">00:00:07</a></td><td><p>Note: Kyle is on page 14 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types?t=86" target="_blank">00:01:26</a></td><td><p>Here&rsquo;s a link to the this section of <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-ecmascript-language-types">the spec</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types?t=192" target="_blank">00:03:12</a></td><td><p>There is an error in the slide. The type &ldquo;object&rdquo; is not a primitive type.</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types?t=403" target="_blank">00:06:43</a></td><td><p>Since this course was recorded, Bigint has been added to the language as another primitive.</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types?t=421" target="_blank">00:07:01</a></td><td><p>Here&rsquo;s a link to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt">MDN on BigInt</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types?t=464" target="_blank">00:07:44</a></td><td><p>The object listed on the left is an error. Objects are considered objects.</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/primitive-types?t=476" target="_blank">00:07:56</a></td><td><p>For more information on primitives, see the <a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/types-grammar/README.md">2nd edition of Types &amp; Grammar</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/typeof-operator" target="_blank">typeof Operator</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/bigint" target="_blank">BigInt</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/bigint?t=25" target="_blank">00:00:25</a></td><td><p>check out ieee numbers</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/kinds-of-emptiness" target="_blank">Kinds of Emptiness</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/kinds-of-emptiness?t=109" target="_blank">00:01:49</a></td><td><p>Here&rsquo;s a link to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz">MDN on the TDZ</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/nan-isnan" target="_blank">NaN & isNaN</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/nan-isnan?t=39" target="_blank">00:00:39</a></td><td><p>Tip: The IEEE 754 spec is a set of technical standards for how numbers are represented</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/negative-zero" target="_blank">Negative Zero</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/type-check-exercise" target="_blank">Type Check Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/type-check-exercise?t=12" target="_blank">00:00:12</a></td><td><p>Here&rsquo;s a link to download the <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2-exercises.zip">the exercises</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/type-check-exercise?t=19" target="_blank">00:00:19</a></td><td><p>Note: A polyfill is a piece of code that provides a service that you, the developer, expect it to provide natively</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/type-check-exercise?t=32" target="_blank">00:00:32</a></td><td><p>Note: The tests will pass because the <code>Object.is()</code>spec has been updated</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/type-check-exercise?t=152" target="_blank">00:02:32</a></td><td><p>Note: The full path to the file is types-exercises &gt; object-is &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/type-check-exercise-solution" target="_blank">Type Check Exercise Solution</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/type-check-exercise-solution?t=272" target="_blank">00:04:32</a></td><td><p>1/-∞ = -0</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/fundamental-objects" target="_blank">Fundamental Objects</a></h3>
+    <h2>Coercion</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/abstract-operations" target="_blank">Abstract Operations</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/abstract-operations?t=0" target="_blank">00:00:00</a></td><td><p>Note: Kyle is on page 34 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/abstract-operations?t=18" target="_blank">00:00:18</a></td><td><p>Here&rsquo;s a link to this section of <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-abstract-operations">the spec</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/tostring" target="_blank">toString</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/tonumber" target="_blank">toNumber</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/toboolean" target="_blank">toBoolean</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/cases-of-coercion" target="_blank">Cases of Coercion</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/boxing" target="_blank">Boxing</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/corner-cases-of-coercion" target="_blank">Corner Cases of Coercion</a></h3>
+    <h2>Philosophy of Coercion</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/intentional-coercion" target="_blank">Intentional Coercion</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/intentional-coercion?t=10" target="_blank">00:00:10</a></td><td><p>Note: Kyle is on page 78 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/culture-of-learning" target="_blank">Culture of Learning</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/code-communication-q-a" target="_blank">Code Communication Q&A</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/implicit-coercion" target="_blank">Implicit Coercion</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/understanding-features" target="_blank">Understanding Features</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/coercion-exercise" target="_blank">Coercion Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/coercion-exercise?t=11" target="_blank">00:00:11</a></td><td><p>Note: The full path to the file is types-exercises &gt; coercion &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/coercion-exercise-solution" target="_blank">Coercion Exercise Solution</a></h3>
+    <h2>Equality</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-triple-equals" target="_blank">Double & Triple Equals</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-triple-equals?t=6" target="_blank">00:00:06</a></td><td><p>Note: Kyle is on page 92 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-triple-equals?t=112" target="_blank">00:01:52</a></td><td><p>Here&rsquo;s a link to this section of <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-strict-equality-comparison">the spec</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-triple-equals?t=423" target="_blank">00:07:03</a></td><td><p>Note: Lines 9 and 13 should be <code>workshop1</code></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/coercive-equality" target="_blank">Coercive Equality</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/coercive-equality?t=295" target="_blank">00:04:55</a></td><td><p>Here&rsquo;s a link to check out <a href="https://eslint.org/">ESLint</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-equals-algorithm" target="_blank">Double Equals Algorithm</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-equals-walkthrough" target="_blank">Double Equals Walkthrough</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-equals-summary" target="_blank">Double Equals Summary</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/double-equals-corner-cases" target="_blank">Double Equals Corner Cases</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/corner-cases-booleans" target="_blank">Corner Cases: Booleans</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/corner-cases-summary" target="_blank">Corner Cases: Summary</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/the-case-for-double-equals" target="_blank">The Case for Double Equals</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/equality-exercise" target="_blank">Equality Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/equality-exercise?t=10" target="_blank">00:00:10</a></td><td><p>Note: The full path to the file is types-exercises &gt; equality &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/equality-exercise-solution" target="_blank">Equality Exercise Solution</a></h3>
+    <h2>Static Typing</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/typescript-flow" target="_blank">TypeScript & Flow</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/typescript-flow?t=10" target="_blank">00:00:10</a></td><td><p>Note: Kyle is on page 131 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/typescript-flow?t=214" target="_blank">00:03:34</a></td><td><p>Check out the <a href="https://frontendmasters.com/courses/typescript/">course on TypeScript</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/inferencing" target="_blank">Inferencing</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/custom-types" target="_blank">Custom Types</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/validating-operand-types" target="_blank">Validating Operand Types</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/typescript-flow-summary" target="_blank">TypeScript & Flow Summary</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/typescript-flow-summary?t=12" target="_blank">00:00:12</a></td><td><p>Here&rsquo;s a link to <a href="https://github.com/niieani/typescript-vs-flowtype">this article</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/static-typing-pros" target="_blank">Static Typing Pros</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/static-typing-cons" target="_blank">Static Typing Cons</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/understanding-your-types" target="_blank">Understanding Your Types</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/understanding-your-types?t=231" target="_blank">00:03:51</a></td><td><p>Here&rsquo;s a link to the bonus lesson on <a href="https://frontendmasters.com/courses/deep-javascript-v3/bonus-typl/">Typl</a></p>
+</td></tr>
+    </table>
+    <h2>Scope</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/scope" target="_blank">Scope</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/scope?t=7" target="_blank">00:00:07</a></td><td><p>Note: Kyle is on page 174 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/compilation-scope" target="_blank">Compilation & Scope</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/executing-code" target="_blank">Executing Code</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/compilation-and-scope-q-a" target="_blank">Compilation and Scope Q&A</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/code-execution-finishing-up" target="_blank">Code Execution: Finishing Up</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/lexical-scope-review" target="_blank">Lexical Scope Review</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/compilation-review" target="_blank">Compilation Review</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/dynamic-global-variables" target="_blank">Dynamic Global Variables</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/strict-mode" target="_blank">Strict Mode</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/nested-scope" target="_blank">Nested Scope</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/undefined-vs-undeclared" target="_blank">Undefined vs Undeclared</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/lexical-scope-elevator" target="_blank">Lexical Scope Elevator</a></h3>
+    <h2>Scope & Function Expressions</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expressions" target="_blank">Function Expressions</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expressions?t=5" target="_blank">00:00:05</a></td><td><p>Note: Kyle is on page 185 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/naming-function-expressions" target="_blank">Naming Function Expressions</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/arrow-functions" target="_blank">Arrow Functions</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/arrow-functions?t=10" target="_blank">00:00:10</a></td><td><p>Here&rsquo;s the MDN docs on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-types-hierarchy" target="_blank">Function Types Hierarchy</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-exercise" target="_blank">Function Expression Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-exercise?t=12" target="_blank">00:00:12</a></td><td><p>Note: The full path to the file is scope exercises &gt; function-expressions &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-solution-functions" target="_blank">Function Expression Solution: Functions</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-solution-functions?t=88" target="_blank">00:01:28</a></td><td><p>Here&rsquo;s the MDN docs on the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">find function</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-solution-functions?t=162" target="_blank">00:02:42</a></td><td><p>Here are the MDN docs on the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map function</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-solution-functions?t=221" target="_blank">00:03:41</a></td><td><p>Here&rsquo;s the MDN docs on the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort function</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-solution-functions?t=499" target="_blank">00:08:19</a></td><td><p>Here&rsquo;s the MDN docs on the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter function</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-solution-functions?t=548" target="_blank">00:09:08</a></td><td><p>Here&rsquo;s the MDN on the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">includes function</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-expression-solution-arrow-functions" target="_blank">Function Expression Solution: Arrow Functions</a></h3>
+    <h2>Advanced Scope</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/lexical-dynamic-scope" target="_blank">Lexical & Dynamic Scope</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/lexical-dynamic-scope?t=10" target="_blank">00:00:10</a></td><td><p>Note: Kyle is on page 191 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/lexical-scope" target="_blank">Lexical Scope</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/dynamic-scope" target="_blank">Dynamic Scope</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/function-scoping" target="_blank">Function Scoping</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/iife-pattern" target="_blank">IIFE Pattern</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/block-scoping" target="_blank">Block Scoping</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/block-scoping?t=127" target="_blank">00:02:07</a></td><td><p>This is no longer true. In strict mode, function declarations inside blocks are scoped to that block and are hoisted.</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/choosing-let-or-var" target="_blank">Choosing let or var</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/explicit-let-block" target="_blank">Explicit let Block</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/const" target="_blank">const</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/const-q-a" target="_blank">const Q&A</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/hoisting" target="_blank">Hoisting</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/hoisting-example" target="_blank">Hoisting Example</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/let-doesn-t-hoist" target="_blank">let Doesn't Hoist</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/hoisting-exercise" target="_blank">Hoisting Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/hoisting-exercise?t=10" target="_blank">00:00:10</a></td><td><p>Note: The full path to the file is scope-exercises &gt; hoisting &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/hoisting-exercise-solution" target="_blank">Hoisting Exercise Solution</a></h3>
+    <h2>Closure</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/origin-of-closure" target="_blank">Origin of Closure</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/origin-of-closure?t=10" target="_blank">00:00:10</a></td><td><p>Note: Kyle is on page 222 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/origin-of-closure?t=182" target="_blank">00:03:02</a></td><td><p>Note: Brendan Eich is the creator of the JavaScript language</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/origin-of-closure?t=336" target="_blank">00:05:36</a></td><td><p>Here&rsquo;s a link to learn more about the <a href="https://www.perl.org/">Perl language</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/what-is-closure" target="_blank">What is Closure?</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/closing-over-variables" target="_blank">Closing Over Variables</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/module-pattern" target="_blank">Module Pattern</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/es6-modules-node-js" target="_blank">ES6 Modules & Node.js</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/es6-modules-node-js?t=7" target="_blank">00:00:07</a></td><td><p>Check out the latest <a href="https://nodejs.org/docs/latest/api/esm.html#introduction">ECMAScript Module documentation and techniques</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/es6-modules-node-js?t=92" target="_blank">00:01:32</a></td><td><p>Here&rsquo;s a link to the <a href="https://www.npmjs.com/">npm site</a></p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/es6-modules-node-js?t=164" target="_blank">00:02:44</a></td><td><p>Note: TC39 is an ECMA committee which follows a process to develop language features for JavaScript</p>
+</td></tr>
+    </table>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/es6-modules-node-js?t=195" target="_blank">00:03:15</a></td><td><p>Note: libuv is a JavaScript library focused on asynchronous IO</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/es6-module-syntax" target="_blank">ES6 Module Syntax</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/module-exercise" target="_blank">Module Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/module-exercise?t=10" target="_blank">00:00:10</a></td><td><p>Note: The full path to the file is scope-exercises &gt; modules &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/module-exercise-solution" target="_blank">Module Exercise Solution</a></h3>
+    <h2>Objects</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/objects-overview" target="_blank">Objects Overview</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/objects-overview?t=9" target="_blank">00:00:09</a></td><td><p>Note: Kyle is on page 237 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/the-this-keyword" target="_blank">The this Keyword</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/implicit-explicit-binding" target="_blank">Implicit & Explicit Binding</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/the-new-keyword" target="_blank">The new Keyword</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/default-binding" target="_blank">Default Binding</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/binding-precedence" target="_blank">Binding Precedence</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/arrow-functions-lexical-this" target="_blank">Arrow Functions & Lexical this</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/arrow-functions-lexical-this?t=200" target="_blank">00:03:20</a></td><td><p>Here&rsquo;s a link to this section of <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-arrow-function-definitions-runtime-semantics-evaluation">the specs</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/resolving-this-in-arrow-functions" target="_blank">Resolving this in Arrow Functions</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/this-exercise" target="_blank">this Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/this-exercise?t=11" target="_blank">00:00:11</a></td><td><p>Note: The full path to the file is objects-exercises &gt; this &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/this-exercise-solution" target="_blank">this Exercise Solution</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/es6-class-keyword" target="_blank">ES6 class Keyword</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/fixing-this-in-classes" target="_blank">Fixing this in Classes</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/fixing-this-in-classes?t=70" target="_blank">00:01:10</a></td><td><p>Here&rsquo;s a link to the <a href="https://gist.github.com/getify/86bed0bb78ccb517c84a6e61ec16adca">GitHub Gist</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/class-exercise" target="_blank">class Exercise</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/class-exercise?t=13" target="_blank">00:00:13</a></td><td><p>Note: The full path to the file is objects-exercises &gt; class &gt; ex.js</p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/class-exercise-solution" target="_blank">class Exercise Solution</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/class-exercise-solution?t=167" target="_blank">00:02:47</a></td><td><p>Note: Kyle is using <a href="https://runjs.dev/">RunJS</a></p>
+</td></tr>
+    </table>
+    <h2>Prototypes</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/prototypes" target="_blank">Prototypes</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/prototypes?t=10" target="_blank">00:00:10</a></td><td><p>Note: Kyle is on page 267 of <a href="https://static.frontendmasters.com/resources/2019-03-07-deep-javascript-v2/deep-js-foundations-v2.pdf">the slides</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/prototypal-class" target="_blank">Prototypal Class</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/the-prototype-chain" target="_blank">The Prototype Chain</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/the-prototype-chain?t=150" target="_blank">00:02:30</a></td><td><p>Here&rsquo;s a link to the MDN on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/dunder-prototypes" target="_blank">Dunder Prototypes</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/this-prototypes-q-a" target="_blank">this & prototypes Q&A</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/this-prototypes-q-a?t=212" target="_blank">00:03:32</a></td><td><p>Here&rsquo;s a link to the MDN on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf">Object.prototypeof</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/shadowing-prototypes" target="_blank">Shadowing Prototypes</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/prototypal-inheritance" target="_blank">Prototypal Inheritance</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/classical-vs-prototypal-inheritance" target="_blank">Classical vs Prototypal Inheritance</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/inheritance-is-delegation" target="_blank">Inheritance is Delegation</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/oloo-pattern" target="_blank">OLOO Pattern</a></h3>
+    <table>
+    <tr><td><a href="https://frontendmasters.com/courses/deep-javascript-v3/oloo-pattern?t=86" target="_blank">00:01:26</a></td><td><p>Here&rsquo;s a link to learn more about the <a href="https://www.lua.org/about.html">Lua language</a></p>
+</td></tr>
+    </table>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/delegation-oriented-design" target="_blank">Delegation-Oriented Design</a></h3>
+    <h2>Wrapping Up</h2>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/wrapping-up" target="_blank">Wrapping Up</a></h3>
+    <h3><a href="https://frontendmasters.com/courses/deep-javascript-v3/bonus-typl" target="_blank">Bonus: Typl</a></h3>
+    </body>
+</html>
