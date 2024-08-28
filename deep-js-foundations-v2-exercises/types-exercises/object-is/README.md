@@ -27,3 +27,28 @@ if (!Object.is) {
 	Object.is = function ObjectIs(..) { .. };
 }
 ```
+
+
+
+
+soup 
+kipsoup
+kipfilet kerkstraat 
+rijft 
+chocolade taart
+slaagroom
+tachtag jaar
+wilhamina startt
+buurthuis
+nieuwstart 56 zondag 9 seot 10 sept 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,62 @@
 // TODO: write `findAll(..)`
-
+function findAll(searchobj, array) {
+  let resultarr = [];
+  for(var i=0; i < array.length; i++) {
+    if(array[i] == undefined) {
+      if(searchobj == array[i]) {
+        resultarr.push(array[i])
+      }
+    } else {
+      if(Object.is(searchobj)) {
+        if(array[i] && Object.is(array[i])) {
+          if(array[i].toString() == searchobj.toString()) {
+            resultarr.push(array[i])
+          }
+        }
+      }
+      if(typeof searchobj == 'string') {
+        if(typeof array[i] == 'string' || typeof array[i] == 'number') {
+          if((searchobj+"").trim() == (array[i]+"").trim()) {
+            resultarr.push(array[i])
+          }  
+        }
+        
+      }
+      if(typeof searchobj == 'number') {
+        if(searchobj == -Infinity || searchobj == Infinity || Number.isNaN(searchobj)) {
+          if(array[i] == -Infinity || array[i] == Infinity || Number.isNaN(array[i])) {
+            continue;
+          }
+        } else {
+          if(typeof array[i] == 'number' || typeof array == 'string') {
+            if (searchobj == array[i]) {
+              resultarr.push(array[i])
+            }
+          }
+        }
+      }
+      
+      if(typeof searchobj == 'boolean') {
+        if(typeof array[i] == 'boolean') {
+          if(searchobj == array[i]) {
+            resultarr.push(array[i])
+          }
+        }
+      }
+      
+    }
+    // if(searchobj == undefined) {
+    //   if(array[i] == searchobj) {
+    //     resultarr.push(array[i])
+    //   }
+    // }
+    
+    
+  }
+  
+  return resultarr;
+  
+}
 
 
 // tests:
@@ -9,6 +66,7 @@ var values = [
 	null, undefined, -0, 0, 13, 42, NaN, -Infinity, Infinity,
 	"", "0", "42", "42hello", "true", "NaN", true, false, myObj
 ];
+
 
 console.log(setsMatch(findAll(null,values),[null,undefined]) === true);
 console.log(setsMatch(findAll(undefined,values),[null,undefined]) === true);
